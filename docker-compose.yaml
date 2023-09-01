@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  database:
+    container_name: database
+    environment:
+      POSTGRES_DB: trpc
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      TZ: America/Phoenix
+    image: postgres:15.3-alpine
+    ports:
+      - 4410:5432
+    restart: unless-stopped
+    volumes:
+      - ./db/init:/docker-entrypoint-initdb.d

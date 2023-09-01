@@ -1,0 +1,20 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "include": ["src"],
+  "exclude": [],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "module": "ESNext",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    /* Linting */
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true
+  }
+}

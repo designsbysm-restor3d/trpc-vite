@@ -1,0 +1,16 @@
+{
+  "name": "@designsbysm/trpc-root",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docker:down": "docker compose down",
+    "docker:up": "docker compose up -d --build",
+    "start": "run-p start:*",
+    "start:server": "yarn workspace @designsbysm/trpc-server start",
+    "start:client": "yarn workspace @designsbysm/trpc-client start"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {}
+}
